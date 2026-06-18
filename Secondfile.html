@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Top 10 Tourist Places in India - Beginner's Guide</title>
+  <style>
+    :root{ --accent:#0b6efd; --muted:#666; --card:#fff; --bg:#f5f7fb }
+    body{ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin:0; background:var(--bg); color:#222 }
+    header{ background:linear-gradient(90deg,#0b6efd33,#6fa8ff22); padding:1.25rem 1rem; text-align:center }
+    header h1{ margin:0; font-size:1.6rem }
+    header p{ margin:0.25rem 0 0; color:var(--muted); font-size:0.95rem }
+    .container{ max-width:1000px; margin:1.25rem auto; padding:0 1rem }
+    .controls{ display:flex; gap:.5rem; margin-bottom:1rem; align-items:center; flex-wrap:wrap }
+    .controls input[type="search"]{ flex:1; min-width:180px; padding:.6rem .75rem; border:1px solid #ddd; border-radius:6px }
+    .controls button{ background:var(--accent); color:#fff; border:none; padding:.6rem .8rem; border-radius:6px; cursor:pointer }
+    .grid{ display:grid; grid-template-columns: repeat(auto-fill,minmax(300px,1fr)); gap:1rem }
+    .card{ background:var(--card); border-radius:8px; padding:1rem; box-shadow:0 6px 18px rgba(20,30,50,0.06) }
+    .card h2{ margin:.25rem 0; font-size:1.1rem }
+    .meta{ color:var(--muted); font-size:0.9rem; margin-bottom:.5rem }
+    .desc{ font-size:0.95rem; color:#333; margin-bottom:.6rem }
+    .more{ font-size:0.9rem }
+    a.more-link{ color:var(--accent); text-decoration:none }
+    footer{ text-align:center; padding:1rem; color:var(--muted); font-size:0.9rem }
+    @media (max-width:420px){ header h1{ font-size:1.25rem } }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Top 10 Tourist Places in India</h1>
+    <p>A simple beginner-friendly guide with short descriptions and practical tips.</p>
+  </header>
+
+  <main class="container">
+    <section class="controls">
+      <input id="search" type="search" placeholder="Search places by name (e.g., Taj Mahal)" aria-label="Search places">
+      <button id="clear">Clear</button>
+      <button id="shuffle">Shuffle</button>
+    </section>
+
+    <section id="places" class="grid">
+      <!-- Card 1 -->
+      <article class="card" data-name="taj mahal" data-best="oct-mar">
+        <h2>Taj Mahal</h2>
+        <div class="meta">Location: Agra, Uttar Pradesh • Best time: Oct - Mar</div>
+        <p class="desc">A world-famous ivory-white marble mausoleum built by Mughal emperor Shah Jahan in memory of his wife Mumtaz Mahal. UNESCO World Heritage Site and one of the most iconic symbols of India.</p>
+        <div class="more"><a class="more-link" href="https://en.wikipedia.org/wiki/Taj_Mahal" target="_blank" rel="noopener">Learn more</a></div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="card" data-name="jaipur" data-best="oct-mar">
+        <h2>Jaipur (Pink City)</h2>
+        <div class="meta">Location: Rajasthan • Best time: Oct - Mar</div>
+        <p class="desc">Capital of Rajasthan known for its historic palaces, forts (Amber Fort, Nahargarh), colorful bazaars and rich Rajasthani culture and cuisine.</p>
+        <div class="more"><a class="more-link" href="https://en.wikipedia.org/wiki/Jaipur" target="_blank" rel="noopener">Learn more</a></div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="card" data-name="varanasi" data-best="sep-mar">
+        <h2>Varanasi</h2>
+        <div class="meta">Location: Uttar Pradesh • Best time: Sep - Mar</div>
+        <p class="desc">One of the world's oldest living cities on the banks of the Ganges. Known for ghats, spiritual rituals, ancient temples and vibrant cultural life.</p>
+        <div class="more"><a class="more-link" href="https://en.wikipedia.org/wiki/Varanasi" target="_blank" rel="noopener">Learn more</a></div>
+      </article>
+
+      <!-- Card 4 -->
+      <article class="card" data-name="goa" data-best="nov-feb">
+        <h2>Goa</h2>
+        <div class="meta">Location: West India • Best time: Nov - Feb</div>
+        <p class="desc">Famous for sandy beaches, Portuguese-influenced architecture, relaxed nightlife and seafood. Popular with beach lovers and water-sport enthusiasts.</p>
+        <div class="more"><a class="more-link" href="https://en.wikipedia.org/wiki/Goa" target="_blank" rel="noopener">Learn more</a></div>
+      </article>
+
+      <!-- Card 5 -->
+      <article class="card" data-name="kerala" data-best="sep-mar">
+        <h2>Kerala (Backwaters & Hill Stations)</h2>
+        <div class="meta">Location: South India • Best time: Sep - Mar</div>
+        <p class="desc">Known for tranquil backwaters (Alleppey), houseboat stays, spice gardens and hill stations like Munnar. Often called "God's Own Country".</p>
+        <div class="more"><a class="more-link" href="https://en.wikipedia.org/wiki/Kerala" target="_blank" rel="noopener">Learn more</a></div>
+      </article>
+
+      <!-- Card 6 -->
+      <article class="card" data-name="ladakh" data-best="may-sep">
+        <h2>Ladakh</h2>
+        <div class="meta">Location: Northern India (Jammu & Kashmir region) • Best time: May - Sep</div>
+        <p class="desc">High-altitude desert landscapes, dramatic mountain passes, monasteries (e.g., Hemis), and crystal-clear lakes (Pangong Tso). Ideal for trekking and adventure travel.</p>
+        <div class="more"><a class="more-link" href="https://en.wikipedia.org/wiki/Ladakh" target="_blank" rel="noopener">Learn more</a></div>
+      </article>
+
+      <!-- Card 7 -->
+      <article class="card" data-name="delhi" data-best="oct-mar">
+        <h2>New Delhi</h2>
+        <div class="meta">Location: National Capital Territory of Delhi • Best time: Oct - Mar</div>
+        <p class="desc">India's capital region with historic monuments (Qutub Minar, Red Fort), museums, bustling markets and a gateway to many parts of the country.</p>
+        <div class="more"><a class="more-link" href="https://en.wikipedia.org/wiki/New_Delhi" target="_blank" rel="noopener">Learn more</a></div>
+      </article>
+
+      <!-- Card 8 -->
+      <article class="card" data-name="mumbai" data-best="nov-feb">
+        <h2>Mumbai</h2>
+        <div class="meta">Location: Maharashtra • Best time: Nov - Feb</div>
+        <p class="desc">India's financial capital: home to Bollywood, the Gateway of India, vibrant street food, colonial architecture and lively neighborhoods.</p>
+        <div class="more"><a class="more-link" href="https://en.wikipedia.org/wiki/Mumbai" target="_blank" rel="noopener">Learn more</a></div>
+      </article>
+
+      <!-- Card 9 -->
+      <article class="card" data-name="amritsar" data-best="sep-mar">
+        <h2>Amritsar</h2>
+        <div class="meta">Location: Punjab • Best time: Sep - Mar</div>
+        <p class="desc">Home to the Golden Temple (Harmandir Sahib), a central religious site for Sikhs, and famous for its Langar (community kitchen) and rich Punjabi culture.</p>
+        <div class="more"><a class="more-link" href="https://en.wikipedia.org/wiki/Amritsar" target="_blank" rel="noopener">Learn more</a></div>
+      </article>
+
+      <!-- Card 10 -->
+      <article class="card" data-name="hampi" data-best="oct-feb">
+        <h2>Hampi</h2>
+        <div class="meta">Location: Karnataka • Best time: Oct - Feb</div>
+        <p class="desc">UNESCO World Heritage site with ancient ruins of the Vijayanagara Empire, massive boulders and unique landscape — perfect for history lovers and photographers.</p>
+        <div class="more"><a class="more-link" href="https://en.wikipedia.org/wiki/Hampi" target="_blank" rel="noopener">Learn more</a></div>
+      </article>
+
+    </section>
+
+    <section style="margin-top:1rem; background:#fff; padding:1rem; border-radius:8px; box-shadow:0 6px 18px rgba(20,30,50,0.03)">
+      <h3 style="margin-top:0">Tips for beginners</h3>
+      <ul style="color:var(--muted)">
+        <li>Check weather and local festivals before planning — seasons matter (monsoon vs winter).</li>
+        <li>Book popular attractions in advance (e.g., Taj Mahal tickets) to avoid queues.</li>
+        <li>Carry a printed or offline map for remote areas (Ladakh, backwaters).</li>
+        <li>Respect local customs and dress codes when visiting religious sites.</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">Basic guide • Created for beginners • Links lead to Wikipedia for more details</div>
+  </footer>
+
+  <script>
+    // Simple search/filter script
+    const search = document.getElementById('search');
+    const clearBtn = document.getElementById('clear');
+    const shuffleBtn = document.getElementById('shuffle');
+    const container = document.getElementById('places');
+    const cards = Array.from(container.querySelectorAll('.card'));
+
+    function filterCards() {
+      const q = search.value.trim().toLowerCase();
+      cards.forEach(card => {
+        const name = card.dataset.name || '';
+        card.style.display = name.includes(q) ? '' : 'none';
+      });
+    }
+
+    search.addEventListener('input', filterCards);
+    clearBtn.addEventListener('click', () => { search.value = ''; filterCards(); search.focus(); });
+
+    shuffleBtn.addEventListener('click', () => {
+      // Shuffle cards in the DOM
+      for (let i = cards.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        container.insertBefore(cards[j], cards[i]);
+        // swap in array to maintain reference order
+        [cards[i], cards[j]] = [cards[j], cards[i]];
+      }
+    });
+  </script>
+</body>
+</html>
