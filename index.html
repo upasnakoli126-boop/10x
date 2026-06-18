@@ -5,11 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Top 10 Tourist Places in India - Beginner's Guide</title>
   <style>
-    :root{ --accent:#0b6efd; --muted:#666; --card:#fff; --bg:#f5f7fb }
+    :root{ --accent:#7c3aed; --muted:#5b616b; --card:#ffffff; --bg:#f7f6ff }
     body{ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin:0; background:var(--bg); color:#222 }
-    header{ background:linear-gradient(90deg,#0b6efd33,#6fa8ff22); padding:1.25rem 1rem; text-align:center }
+    header{ background:linear-gradient(90deg, rgba(124,58,237,0.95), rgba(155,107,255,0.12)); padding:1.25rem 1rem; text-align:center }
     header h1{ margin:0; font-size:1.6rem }
     header p{ margin:0.25rem 0 0; color:var(--muted); font-size:0.95rem }
+    header .my-link{ display:inline-block; margin-top:.5rem; color:var(--card); background:var(--accent); padding:.25rem .6rem; border-radius:6px; text-decoration:none; font-weight:600 }
     .container{ max-width:1000px; margin:1.25rem auto; padding:0 1rem }
     .controls{ display:flex; gap:.5rem; margin-bottom:1rem; align-items:center; flex-wrap:wrap }
     .controls input[type="search"]{ flex:1; min-width:180px; padding:.6rem .75rem; border:1px solid #ddd; border-radius:6px }
@@ -23,11 +24,12 @@
     a.more-link{ color:var(--accent); text-decoration:none }
     footer{ text-align:center; padding:1rem; color:var(--muted); font-size:0.9rem }
     /* Welcome overlay styles */
-    .welcome{ position:fixed; inset:0; display:flex; align-items:center; justify-content:center; background:linear-gradient(180deg, rgba(11,110,253,0.95), rgba(111,168,255,0.95)); color:#fff; z-index:9999 }
+    .welcome{ position:fixed; inset:0; display:flex; align-items:center; justify-content:center; background:linear-gradient(180deg, rgba(124,58,237,0.95), rgba(155,107,255,0.95)); color:#fff; z-index:9999 }
     .card-welcome{ background:rgba(255,255,255,0.06); padding:2rem; border-radius:12px; text-align:center; min-width:280px; box-shadow:0 8px 30px rgba(0,0,0,0.2) }
     .card-welcome h1{ margin:0 0 .25rem; font-size:1.6rem }
     .card-welcome .muted{ color:rgba(255,255,255,0.95); opacity:0.95 }
-    #enter{ margin-top:1rem; background:#fff; color:var(--accent); border:none; padding:.6rem 1rem; border-radius:8px; cursor:pointer }
+    #enter{ margin-top:1rem; background:var(--accent); color:#fff; border:none; padding:.6rem 1rem; border-radius:8px; cursor:pointer }
+    #enter:hover{ filter:brightness(1.05); transform:translateY(-1px); }
     @media (max-width:420px){ header h1{ font-size:1.25rem } }
   </style>
 </head>
@@ -36,6 +38,11 @@
     <h1>Top 10 Tourist Places in India</h1>
     <p>A simple beginner-friendly guide with short descriptions and practical tips.</p>
   </header>
+
+  <!-- Quick link to personal page -->
+  <div style="text-align:center; margin-top:.5rem">
+    <a class="my-link" href="UpasnaKoli.html">Open Upasna's Page</a>
+  </div>
 
   <!-- Welcome overlay -->
   <div id="welcome" class="welcome" role="dialog" aria-labelledby="welcome-title" aria-modal="true">
